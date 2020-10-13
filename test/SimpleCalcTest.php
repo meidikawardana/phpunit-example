@@ -9,13 +9,13 @@ class SimpleCalcTest extends TestCase
 	 */
 	public function testAddPercentage($input, $expected, $percentage)
 	{
-//		try {
+		try {
 		  $calc = new SimpleCalc;
 		  $output = $calc->addPercentage($input, $percentage);
 		  $this->assertSame($expected, $output);
-//		} catch (\Exception $e) {
-//		  $this->assertEquals('Invalid Percentage', $e->getMessage());
-//		}
+		} catch (\Exception $e) {
+		  $this->assertEquals('Invalid Percentage', $e->getMessage());
+		}
 	}
 		
 	public function add10PercentProvider()
